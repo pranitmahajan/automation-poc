@@ -1,0 +1,13 @@
+
+{
+  "name": "testcafe-poc",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "testcafe": "^1.10.1"
+  },
+  "scripts": {
+    "test": "testcafe"
+  }
+}

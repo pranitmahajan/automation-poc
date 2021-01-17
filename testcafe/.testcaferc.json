@@ -1,0 +1,28 @@
+{
+    "browsers": "safari",
+
+    "src": ["./tests/signUp.test.js", "./tests/createProject.test.js", "./tests/addEmployee.test.js", "./tests/addTasks.test.js"],
+
+    "reporter": [
+        {
+            "name": "spec"
+        },
+        {
+            "name": "json",
+            "output": "reports/report.json"
+        }
+    ],
+
+    "skipJsErrors": true,
+    "skipUncaughtErrors": true,
+    
+    "speed": 0.9,
+
+    "hostname": "localhost",
+    "ssl": {
+        "pfx": "./cert/testingdomain.pfx",
+        "rejectUnauthorized": true
+    },
+
+    "color": true
+}
