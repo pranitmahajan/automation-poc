@@ -1,5 +1,6 @@
 
 import { Selector, t } from 'testcafe'
+const fs = require('fs');
 
 class SignUpPage {
 
@@ -19,11 +20,13 @@ class SignUpPage {
     }
 
     async signup (name) {
+        let randomId = JSON.parse(fs.readFileSync('data.json')).randomId;
+
         await t
-            .typeText(this.emailInput, 'test14@user.com')
+            .typeText(this.emailInput, 'test'+ randomId +'@user.com')
             .click(this.submitButton)
             .typeText(this.firstNameInput, 'test')
-            .typeText(this.lastNameInput, '14')
+            .typeText(this.lastNameInput, ''+ randomId)
             .click(this.submitButton)
             .typeText(this.passwordInput, 'test1234')
             .click(this.submitButton)

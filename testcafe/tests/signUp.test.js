@@ -4,7 +4,7 @@ import SignUpPage  from '../pages/signUp.page'
 import WelcomePage from '../pages/welcome.page'
 
 fixture `Sign Up`
-    .page `https://app.productive.io/public/login`;
+    .page `https://app.productive.io/public/login`
 
 test('user should be able to sign up and play introduction video', async t => {
     await t.click(SignInPage.signUpLink)

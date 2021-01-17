@@ -58,7 +58,6 @@ exports.config = {
     before: function (capabilities, specs, browser) {
       browser.setWindowSize(1280, 800);
       global.randomId = JSON.parse(fs.readFileSync('data.json')).randomId;
-      console.log(global.randomId);
     },
 
     beforeCommand: function (commandName, args) {

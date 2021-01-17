@@ -24,5 +24,7 @@
         "rejectUnauthorized": true
     },
 
-    "color": true
+    "color": true,
+
+    "appCommand": "node setup.js"
 }
