@@ -11,10 +11,10 @@ exports.config = {
 
     suites: {
       poc: [
-          './test/specs/signup.spec.js',
-          './test/specs/createProject.spec.js',
-          './test/specs/addEmployee.spec.js',
-          './test/specs/addTasks.spec.js'
+        './test/specs/signup.spec.js',
+        './test/specs/createProject.spec.js',
+        './test/specs/addEmployee.spec.js',
+        './test/specs/addTasks.spec.js'
       ]
     },
 

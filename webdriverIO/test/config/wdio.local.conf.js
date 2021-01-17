@@ -6,18 +6,14 @@ exports.config = {
       services: ['selenium-standalone'],
 
       capabilities: [
+
         // {
-        //   maxInstances: 1,
-        //   browserName: 'chrome',
-        //   'goog:chromeOptions': {
-        //       //headless: true
-        //   }
+        //   browserName: 'chrome'
         // },
 
         {
-          maxInstances: 1,
           browserName: 'safari',
-        },
+        }
 
       ]
     }
