@@ -6,8 +6,8 @@
     "test-signup": "npm run allure:history && wdio ./test/config/wdio.local.conf.js --spec ./test/specs/signup.spec.js",
     "test-createProject": "npm run allure:history && wdio ./test/config/wdio.local.conf.js --spec ./test/specs/createProject.spec.js",
     "test-addEmployee": "npm run allure:history && wdio ./test/config/wdio.local.conf.js --spec ./test/specs/addEmployee.spec.js",
-    "test-addTasks": "npm run allure:history && wdio ./test/config/wdio.local.conf.js --spec ./test/specs/addTasks.spec.js",
-    "test": "npm run test-addEmployee && npm run test-addTasks"
+    "tests": "npm run allure:history && wdio ./test/config/wdio.local.conf.js --suite poc",
+    "test": "npm run test-signup && npm run test-createProject && npm run test-addEmployee && npm run test-addTasks"
   },
   "dependencies": {
     "@babel/cli": "^7.8.4",

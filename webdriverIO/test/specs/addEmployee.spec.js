@@ -13,7 +13,7 @@ describe('add employee', function () {
         WelcomePage.invitePeople.click();
         WelcomePage.inviteEmployeeOption.click();
         WelcomePage.inviteEmployeeEmailButton.click();
-        WelcomePage.inviteEmployeeEmailSearch.addValue('employee13@user.com');
+        WelcomePage.inviteEmployeeEmailSearch.addValue('employee'+ randomId +'@user.com');
         WelcomePage.inviteEmployeeEmailList.click();
         browser.keys('Escape');
         WelcomePage.submitButton.click();
@@ -22,13 +22,13 @@ describe('add employee', function () {
     });
 
     it('add employee to project', function () {
-        browser.pause(1000);
+        browser.pause(2000);
         WelcomePage.projectsMenu.click();
         ProjectsPage.projectListItemBlock.waitForExist();
         ProjectsPage.projectListItemBlock.click();
         ProjectsPage.newPeopleIcon.click();
         ProjectsPage.selectPeopleButton.click();
-        ProjectsPage.userSearchInput.addValue('employee 13');
+        ProjectsPage.userSearchInput.addValue('employee '+ randomId);
         ProjectsPage.userSearchListItem.click();
         ProjectsPage.submitButton.click();
         browser.keys('Escape');
@@ -37,7 +37,7 @@ describe('add employee', function () {
     it('login with invited employee and verify project added', function () {
         WelcomePage.logout();
         SignInPage.open();
-        SignInPage.signIn('employee13@user.com', 'test1234');
+        SignInPage.signIn('employee'+ randomId +'@user.com', 'test1234');
         WelcomePage.homeMenu.waitForExist();
         browser.pause(1000);
         browser.keys('Escape');

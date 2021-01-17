@@ -14,7 +14,7 @@ test('add employee to company workspace', async t => {
         .click(WelcomePage.invitePeople)
         .click(WelcomePage.inviteEmployeeOption)
         .click(WelcomePage.inviteEmployeeEmailButton)
-        .typeText(WelcomePage.inviteEmployeeEmailSearch, 'test12@user.com')
+        .typeText(WelcomePage.inviteEmployeeEmailSearch, 'test14@user.com')
         .click(WelcomePage.inviteEmployeeEmailList)
         .pressKey('esc')
         .click(WelcomePage.submitButton)
@@ -30,13 +30,13 @@ test('add employee to project', async t => {
         .click(ProjectsPage.projectListItemBlock)
         .click(ProjectsPage.newPeopleIcon)
         .click(ProjectsPage.selectPeopleButton)
-        .typeText(ProjectsPage.userSearchInput, 'test 12')
+        .typeText(ProjectsPage.userSearchInput, 'test 14')
         .click(ProjectsPage.userSearchListItem)
         .click(ProjectsPage.submitButton);
 });
 
 test('login with invited employee and verify project added', async t => {
-    await SignInPage.signIn('test12@user.com', 'test1234');
+    await SignInPage.signIn('test14@user.com', 'test1234');
 
     await t
         .hover(WelcomePage.homeMenu)

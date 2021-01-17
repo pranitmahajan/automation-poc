@@ -1,7 +1,6 @@
 
 import Page        from './page';
 import WelcomePage from './welcome.page';
-import assert      from 'assert';
 
 class ProjectsPage extends Page {
    
@@ -38,7 +37,6 @@ class ProjectsPage extends Page {
         this.privateMembersOption.click();
         this.submitButton.click();
         this.projectTitle.waitForExist();
-        assert.match(this.projectTitle.getText(), new RegExp(name));
     }
 }
 

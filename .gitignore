@@ -3,6 +3,7 @@ logs
 *.log
 npm-debug.log*
 .DS_Store
+data.json
 
 # Dependency directories
 node_modules/
@@ -15,3 +16,4 @@ node_modules/
 
 #reports
 reports/
+allure-report

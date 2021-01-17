@@ -17,10 +17,10 @@ class SignUpPage extends Page {
     get sampleDataButton()     { return $('button[data-test-registration-sample-data-skip-button')} ;
 
     signup(){
-        this.emailInput.addValue('employee14@user.com');
+        this.emailInput.addValue('employee'+ randomId +'@user.com');
         this.submitButton.click();
         this.firstNameInput.addValue('employee');
-        this.lastNameInput.addValue('14');
+        this.lastNameInput.addValue(randomId);
         this.submitButton.click();
         this.passwordInput.addValue('test1234');
         this.submitButton.click();

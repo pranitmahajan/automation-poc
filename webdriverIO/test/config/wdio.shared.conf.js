@@ -1,4 +1,5 @@
-const path = require('path')
+const path = require('path');
+const fs = require('fs');
 
 exports.config = {
 
@@ -49,8 +50,15 @@ exports.config = {
 
     ],
 
+    onPrepare: function (config, capabilities) {
+      data = { randomId: Math.floor(Math.random() * (10000 - 20 + 1) + 20)}
+      fs.writeFileSync('data.json', JSON.stringify(data));
+    },
+
     before: function (capabilities, specs, browser) {
       browser.setWindowSize(1280, 800);
+      global.randomId = JSON.parse(fs.readFileSync('data.json')).randomId;
+      console.log(global.randomId);
     },
 
     beforeCommand: function (commandName, args) {

@@ -20,10 +20,10 @@ class SignUpPage {
 
     async signup (name) {
         await t
-            .typeText(this.emailInput, 'test12@user.com')
+            .typeText(this.emailInput, 'test14@user.com')
             .click(this.submitButton)
             .typeText(this.firstNameInput, 'test')
-            .typeText(this.lastNameInput, '12')
+            .typeText(this.lastNameInput, '14')
             .click(this.submitButton)
             .typeText(this.passwordInput, 'test1234')
             .click(this.submitButton)
